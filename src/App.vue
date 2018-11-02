@@ -172,7 +172,7 @@ body, p, a, h1, h2, h3, ul, li{
     flex: 1 1 auto;
     padding: 50px 100px 0 100px;
     z-index: 2;
-   // animation: fadein 2s ease-in 1s;
+    animation: fadein 0.2s ease-in 1s;
   }
 
   
@@ -195,21 +195,23 @@ body.locations #app .content{
 
     .menu-close{
       transform: rotate(45deg);
-      font-size: 45px;
+      font-size: 55px;
+      font-weight: 400;
     }
 }
 @media (max-width:992px){
     .menu-icon{
         display: flex;
         justify-content: center;
-        height: 50px;
-        width: 50px;
+        align-items: center;
+        height: 60px;
+        width: 60px;
         z-index: 1000;
         position: fixed;
         right: 20px;
         bottom: 20px;
         border-radius: 150px;
-        background: red;
+        background: rgba(255,0,0,0.9);
     }
     #app{
       .title{
@@ -224,16 +226,25 @@ body.locations #app .content{
     }
 
     #nav{
-      display: none;
       flex-direction: column;
       bottom: 90px!important;
       height: auto;
+      max-height: 0;
       width: auto !important;
+      overflow: hidden;
+      animation: menu-slide 0.2s linear both;
     }
 
     #nav.show{
-      display:flex;
+      max-height: 300px;
     }
+
+    @keyframes menu-slide {
+    0%   {bottom: 90px; max-height:0;}
+    50%  {bottom: 100px; max-height:300px;}
+    75%  {bottom: 80px; max-height:300px;}
+    100% {bottom: 90px; max-height:300px;}
+}
 }
 
 </style>
