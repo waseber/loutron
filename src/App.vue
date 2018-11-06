@@ -58,11 +58,15 @@
                   nav.classList.add('show');
                 }
               }
-            }
+            },
     },
-    mounted(){
-           // this.toggleMenu()
-        }
+    watch:{
+      '$route' () {
+        this.toggleMenu();
+        this.showMenu = !this.showMenu;
+        //console.log('hi');
+      }
+    }
   }
 </script>
 
@@ -175,7 +179,6 @@ body, p, a, h1, h2, h3, ul, li{
     animation: fadein 0.2s ease-in 1s;
   }
 
-  
   #nav{
     width: 100%;
     bottom: 0;

@@ -101,12 +101,12 @@
         #nav{
             flex-direction: column;
             bottom: 60px;
-            height: auto;
+            height: 100vh;
             width: auto;
             display: none;
 
             .navHome, .navLocations, .navServices, .navContact{
-                width: 100%;
+                width: 100vw;
             }
         }
         #nav.show{

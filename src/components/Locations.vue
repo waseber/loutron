@@ -93,6 +93,10 @@
         position:fixed;  
         z-index:1;
 
+        @media (max-width:992px){
+            height: 100%;
+        }
+
         #map_canvas_1{
             height: 100%;
         }
@@ -110,6 +114,10 @@
         z-index: 3;
         position: fixed;
         top: 0;
+
+        @media (max-width:992px){
+            border-width: 2000px 100px 0 0;
+        }
     }
 
     .addresses{
